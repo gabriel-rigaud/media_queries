@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Media query pour une résolution inférieure ou égale à 767px */
+@media screen and (max-width: 767px) {
+    nav {
+        display: none; /* Masquer la navigation par défaut */
+    }
+
+    .menu-btn {
+        cursor: pointer;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .btn-line {
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .change .btn-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .change .btn-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .btn-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
